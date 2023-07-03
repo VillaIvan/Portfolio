@@ -24,7 +24,7 @@ export default function RootLayout({ children }) {
         <Providers>
           <Box as="main" pb={8}>
             <Navbar />
-            <Container maxW="container.md" pt={14}>
+            <Container maxW="container.md" pt={20}>
               {children}
             </Container>
           </Box>

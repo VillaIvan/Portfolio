@@ -1,23 +1,21 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Text, useColorModeValue, Flex } from "@chakra-ui/react";
-import styled from "@emotion/styled";
-
-const LogoBox = styled.span`
-  font-weight: bold;
-  font-size: 18px;
-  display: inline-flex;
-  height: 30px;
-  line-height: 20px;
-  padding: 10px;
-
-  &:hover img {
-    transform: rotate (20deg);
-  }
-`;
+import { useState } from "react";
 
 const Logo = () => {
-  const keycapImg = `/keycap${useColorModeValue("", "-dark")}.png`;
+  //const [img,setImg] = useState(`/vvvv.svg`)
+  const [mode, setMode] = useState(false);
+  const setImg = () => {
+    if (mode === false) {
+      setMode(true);
+    } else {
+      setMode(false);
+    }
+  };
+
+  //////////////////// cambiar logo segun el modo
+  const keycapImg = `/vvvv.svg`;
   return (
     <Link href="/" scroll={false}>
       <Flex align={"center"}>
